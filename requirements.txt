@@ -1,3 +1,4 @@
 uk-covid19
+matplotlib
 pandas
 jupyterlabs
