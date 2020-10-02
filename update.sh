@@ -20,4 +20,4 @@ cp covid-processed-${TODAY}.csv archive/
 cp ${CSV_FILENAME} archive/
 
 cd output
-surge --domain http://rfcovid.surge.sh $PWD
+surge --domain https://rfcovid.surge.sh $PWD
