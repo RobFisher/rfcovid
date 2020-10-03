@@ -1,4 +1,4 @@
-from uk_covid19 import Cov19API
+import uk_covid19
 
 
 def fetch_covid_csv():
@@ -16,7 +16,7 @@ def fetch_covid_csv():
         "newDeathsByDeathDate": "newDeathsByDeathDate",
     }
 
-    api_request = Cov19API(filters=england_only, structure=columns)
+    api_request = uk_covid19.Cov19API(filters=england_only, structure=columns)
     csv_data = api_request.get_csv()
 
     return csv_data
@@ -27,5 +27,9 @@ if __name__ == '__main__':
     import sys
     output_filename = sys.argv[1]
     with open(output_filename, 'w') as f:
-        data = fetch_covid_csv()
+        try:
+            data = fetch_covid_csv()
+        except uk_covid19.exceptions.FailedRequestError:
+            print('Failed request.')
+            sys.exit(1)
         f.write(data)
