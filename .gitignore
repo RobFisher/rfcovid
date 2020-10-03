@@ -3,4 +3,4 @@ output
 *.csv
 analysis.html
 archive
-
+.vscode
