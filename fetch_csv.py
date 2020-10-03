@@ -11,6 +11,7 @@ def fetch_covid_csv():
         "date": "date",
         "newCasesByPublishDate": "newCasesByPublishDate",
         "hospitalCases": "hospitalCases",
+        "covidOccupiedMVBeds": "covidOccupiedMVBeds",
         "newPillarOneTestsByPublishDate": "newPillarOneTestsByPublishDate",
         "newPillarTwoTestsByPublishDate": "newPillarTwoTestsByPublishDate",
         "newDeathsByDeathDate": "newDeathsByDeathDate",
