@@ -14,7 +14,7 @@ def fetch_covid_csv():
         "covidOccupiedMVBeds": "covidOccupiedMVBeds",
         "newPillarOneTestsByPublishDate": "newPillarOneTestsByPublishDate",
         "newPillarTwoTestsByPublishDate": "newPillarTwoTestsByPublishDate",
-        "newDeathsByDeathDate": "newDeathsByDeathDate",
+        "newDeaths28DaysByDeathDate": "newDeaths28DaysByDeathDate",
     }
 
     api_request = uk_covid19.Cov19API(filters=england_only, structure=columns)
