@@ -4,7 +4,7 @@ export PATH=~/.local/bin:$PATH # use user's Python and Jupyter installations
 export TODAY=$(date '+%Y-%m-%d')
 export CSV_FILENAME=covid_${TODAY}.csv
 
-until python3.7 fetch_csv.py $CSV_FILENAME
+until python3 fetch_csv.py $CSV_FILENAME
 do
     echo "Fetch failed; retry in 10 minutes"
     sleep 10m
